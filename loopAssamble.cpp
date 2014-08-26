@@ -2,7 +2,7 @@
 #include <ctime>
 #include <iostream>
 
-int main() {
+int main () {
 	// Generate data
     const unsigned arraySize = 32768;
     int data[arraySize];
@@ -27,7 +27,7 @@ int main() {
     }
 
     double elapsedTime = static_cast<double>(clock() - start) / CLOCKS_PER_SEC;
-	
+
 	std::cout << "Unsorted time = ";
     std::cout << elapsedTime << std::endl;
     std::cout << "sum = " << sum << std::endl;
