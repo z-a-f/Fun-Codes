@@ -19,5 +19,5 @@ int main() {
 	cout << "Enter m and n: ";
 	cin >> m >> n;
 	cout << "Ackermann(" << m << "," << n << "): " << endl;
-	cout << ackermann(m, kn) << endl;
+	cout << ackermann(m, n) << endl;
 }
