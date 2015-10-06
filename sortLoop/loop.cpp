@@ -10,15 +10,15 @@ void sorted() {
     for (unsigned c = 0; c < arraySize; ++c)
         data[c] = std::rand() % 256;
 	
-	clock_t sortStart = clock();
-    std::sort(data, data + arraySize);
-	std::cout << "Sorting time: " << static_cast<double>(clock() - sortStart) / CLOCKS_PER_SEC << std::endl;
+    clock_t sortStart = clock();
+    // std::sort(data, data + arraySize);
+    std::cout << "Sorting time: " << static_cast<double>(clock() - sortStart) / CLOCKS_PER_SEC << std::endl;
 		
 		
     // Test
     clock_t start = clock();
     long long sum = 0;
-
+    std::sort(data, data + arraySize);
     for (unsigned i = 0; i < 100000; ++i)
     {
         // Primary loop
@@ -31,7 +31,7 @@ void sorted() {
 
     double elapsedTime = static_cast<double>(clock() - start) / CLOCKS_PER_SEC;
 	
-	std::cout << "Sorted time = ";
+    std::cout << "Sorted time = ";
     std::cout << elapsedTime << std::endl;
     std::cout << "sum = " << sum << std::endl;
 }
@@ -62,7 +62,7 @@ void unsorted() {
 
     double elapsedTime = static_cast<double>(clock() - start) / CLOCKS_PER_SEC;
 	
-	std::cout << "Unsorted time = ";
+    std::cout << "Unsorted time = ";
     std::cout << elapsedTime << std::endl;
     std::cout << "sum = " << sum << std::endl;
 }
@@ -70,6 +70,6 @@ void unsorted() {
 
 
 int main() {
-	// unsorted();
-	sorted();
+    // unsorted();
+    sorted();
 }

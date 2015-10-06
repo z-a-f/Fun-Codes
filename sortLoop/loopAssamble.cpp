@@ -3,12 +3,13 @@
 #include <iostream>
 
 int main () {
-	// Generate data
+    // Generate data
     const unsigned arraySize = 32768;
     int data[arraySize];
 
     for (unsigned c = 0; c < arraySize; ++c)
         data[c] = std::rand() % 256;
+        // data[c] = c;
 
     // std::sort(data, data + arraySize);
 
@@ -28,7 +29,7 @@ int main () {
 
     double elapsedTime = static_cast<double>(clock() - start) / CLOCKS_PER_SEC;
 
-	std::cout << "Unsorted time = ";
+    std::cout << "Unsorted time = ";
     std::cout << elapsedTime << std::endl;
     std::cout << "sum = " << sum << std::endl;
 }
